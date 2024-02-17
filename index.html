@@ -25,7 +25,7 @@
                             class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title">Triangle</h2>
+                        <h2 class="card-title" id="cardTitle" >Triangle</h2>
                         <p>Area (A) = 0.5 X b X h</p>
                         <div class="text-xl flex justify-center items-center w-full my-3">
                             <input id="triangle-b" class="mx-2 w-24 border-2 rounded-md p-2" type="text" placeholder="b">
@@ -47,7 +47,7 @@
                             class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title">Rectangle</h2>
+                        <h2 class="card-title" id="cardTitle" >Rectangle</h2>
                         <p>Area (A) = w X I </p>
                         <div class="text-xl flex justify-center items-center w-full my-3">
                             <input id="rec-w" class="mx-2 w-24 border-2 rounded-md p-2" type="text" placeholder="w">
@@ -69,7 +69,7 @@
                             class="rounded-xl" />
                     </figure>
                     <div class="px-10 pb-8 flex flex-col items-center justify-between flex-1 text-center">
-                        <h2 class="card-title">Parallelogram</h2>
+                        <h2 class="card-title" id="cardTitle" >Parallelogram</h2>
                         <p class="">Area (A) = b X h</p> 
                         <div class="text-xl flex justify-center items-center w-full mb-3">
                             <input id="pell-b" class="mx-2 w-24 border-2 rounded-md p-2" type="text" placeholder="b">
@@ -91,7 +91,7 @@
                             class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title">Rhombus</h2>
+                        <h2 class="card-title" id="cardTitle" >Rhombus</h2>
                         <p>Area (A) =  0.5 X d1 X d2</p>
                         <div class="text-xl flex justify-center items-center w-full my-3">
                             <input id="rom-d1" class="mx-2 w-24 border-2 rounded-md p-2" type="text" placeholder="d1">
@@ -113,7 +113,7 @@
                             class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title">Pentagon</h2>
+                        <h2 class="card-title" id="cardTitle" >Pentagon</h2>
                         <p>Area (A) = 0.5 X p X b</p>
                         <div class="text-xl flex justify-center items-center w-full my-3">
                             <input id="pen-p" class="mx-2 w-24 border-2 rounded-md p-2" type="text" placeholder="p">
@@ -135,16 +135,16 @@
                             class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title">Ellipse</h2>
-                        <p>Area (A) = a X b</p>
+                        <h2 class="card-title" id="cardTitle" >Ellipse</h2>
+                        <p>Area (A) = pi X a X b</p>
                         <div class="text-xl flex justify-center items-center w-full my-3">
-                            <input class="mx-2 w-24 border-2 rounded-md p-2" type="text" placeholder="a">
+                            <input id="ell-a" class="mx-2 w-24 border-2 rounded-md p-2" type="text" placeholder="a">
                             <span class="ml-2">cm</span>
-                            <input class="mx-2 w-24 border-2 rounded-md p-2" type="text" placeholder="b">
+                            <input id="ell-b" class="mx-2 w-24 border-2 rounded-md p-2" type="text" placeholder="b">
                             <span>cm</span>
                         </div>
                         <div class="card-actions w-full">
-                            <button onclick="triangleCard()" class="btn text-white w-full text-xl font-bold bg-[#1090D8]">Calculate</button>
+                            <button onclick="ellCard()" class="btn text-white w-full text-xl font-bold bg-[#1090D8]">Calculate</button>
                         </div>
                     </div>
                 </div>

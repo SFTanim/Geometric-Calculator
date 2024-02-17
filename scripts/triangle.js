@@ -1,127 +1,91 @@
 // Triangle Card
 function triangleCard(){
     // triangle-b input
-    const triangleB = document.getElementById('triangle-b');
-    const b = parseFloat(triangleB.value)
+    const b = valueForCalculation('triangle-b');
 
     // triangle-p input
-    const triangleP = document.getElementById('triangle-p');
-    const p = parseFloat(triangleP.value)
-    
+    const p = valueForCalculation('triangle-p');
+
     // triangle area
-    let areaOfTraingle = 0.5*b*p;
+    let area = 0.5*b*p;
     
     // Output Result
-    let resultOutput = document.getElementById('result-output');
-    let pNew = document.createElement('p');
-    pNew.innerHTML= `<p class="text-xl">Triangle Area: ${areaOfTraingle}cm<sup>2</sup></p>`
-    resultOutput.appendChild(pNew);
+    areaValuePrint(area, 'Triangle');
     
 }
 
 // Rectangle Card
 function recCard(){
     // triangle-b input
-    const recW = document.getElementById('rec-w');
-    const W = parseFloat(recW.value)
+    const W = valueForCalculation('rec-w');
 
     // triangle-p input
-    const recI = document.getElementById('rec-i');
-    const I = parseFloat(recI.value)
+    const I = valueForCalculation('rec-i');
     
     // triangle area
-    let areaOfRec = W*I;
+    let area = W*I;
     
     // Output Result
-    let resultOutput = document.getElementById('result-output');
-    let pNew = document.createElement('p');
-    pNew.innerHTML= `
-    <p class="text-xl">
-    Rectangle Area: ${areaOfRec}cm<sup>2</sup>
-    </p>
-    `
-    resultOutput.appendChild(pNew);
+    areaValuePrint(area, 'Rectangle');
 }
 
 // Parallelogram Card
 function pellCard(){
     // Parallelogram- input
-    const pellB = document.getElementById('pell-b');
-    const B = parseFloat(pellB.value)
+    const B = valueForCalculation('pell-b');
 
     // Parallelogram- input
-    const pellH = document.getElementById('pell-h');
-    const H = parseFloat(pellH.value)
+    const H = valueForCalculation('pell-h');
     
     // area
     let area = B*H;
     
     // Output Result
-    let resultOutput = document.getElementById('result-output');
-    let pNew = document.createElement('p');
-    pNew.innerHTML= `
-    <p class="text-xl">
-    Parallelogram Area: ${area}cm<sup>2</sup>
-    </p>
-    `
-    resultOutput.appendChild(pNew);
+    areaValuePrint(area, 'Parallelogram');
 }
  
 // Rhombus Card
 function romCard(){
-    const romD1 = document.getElementById('rom-d1');
-    const d1 = parseFloat(romD1.value)
-
-    const romD2 = document.getElementById('rom-d2');
-    const d2 = parseFloat(romD2.value)
-    
+    const d1 = valueForCalculation('rom-d1');
+    const d2 = valueForCalculation('rom-d2');
     let area = 0.5*d1*d2;
-    
-    let resultOutput = document.getElementById('result-output');
-    let pNew = document.createElement('p');
-    pNew.innerHTML= `
-    <p class="text-xl">
-    Rhombus Area: ${area}cm<sup>2</sup>
-    </p>
-    `
-    resultOutput.appendChild(pNew);
+    areaValuePrint(area, 'Rhombus');
 }
 
 // Pentagon Card
 function penCard(){
-    const penP = document.getElementById('pen-p');
-    const p = parseFloat(penP.value)
-
-    const penB = document.getElementById('pen-b');
-    const b = parseFloat(penB.value)
-    
+    const p = valueForCalculation('pen-p');
+    const b = valueForCalculation('pen-b');
     let area = 0.5*p*b;
-    
-    let resultOutput = document.getElementById('result-output');
-    let pNew = document.createElement('p');
-    pNew.innerHTML= `
-    <p class="text-xl">
-    Pentagon Area: ${area}cm<sup>2</sup>
-    </p>
-    `
-    resultOutput.appendChild(pNew);
+    areaValuePrint(area, 'Pentagon');
 }
 
 // Ellipse Card
 function ellCard(){
-    const ellA = document.getElementById('ell-a');
-    const a = parseFloat(ellA.value)
+    const a = valueForCalculation('ell-a');
+    const b = valueForCalculation('ell-b');
+    let area = 3.1416*a*b;
+    areaValuePrint(area, 'Ellipse');
+}
 
-    const ellB = document.getElementById('ell-b');
-    const b = parseFloat(ellB.value)
-    
-    let area = a*b;
-    
+
+
+
+
+
+function valueForCalculation(inputIdOfInputValur){
+    const inputValue = document.getElementById(inputIdOfInputValur);
+    const intValue = inputValue.value;
+    const lastValue = parseFloat(intValue);
+    return lastValue
+}
+
+function areaValuePrint(areaValue, cardName){
     let resultOutput = document.getElementById('result-output');
     let pNew = document.createElement('p');
     pNew.innerHTML= `
     <p class="text-xl">
-    Ellipse Area: ${area}cm<sup>2</sup>
+    ${cardName} Area: ${areaValue}cm<sup>2</sup>
     </p>
     `
     resultOutput.appendChild(pNew);
